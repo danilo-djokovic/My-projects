@@ -20,11 +20,11 @@ Small PCB with Buck-Boost converter based on TI TSP55289 chip
   <tr>
     <td align="center">
       <img src="Sch.png" width="400"><br>
-      <b>3D Top View</b>
+      <b>3D Schematic</b>
     </td>
     <td align="center">
       <img src="3D - bb.png" width="400"><br>
-      <b>3D Bottom View</b>
+      <b>3D 3D View</b>
     </td>
   </tr>
   <tr>
@@ -42,10 +42,11 @@ Small PCB with Buck-Boost converter based on TI TSP55289 chip
 ---
 
 ## Hardware
-Stackup used for board was: 
-					Signal - GND - GND - Signal
-Slide switch(initialy intended for changing I2C address) was remowed from top right corner for lowering the price of production.
+Stackup used for board was:
 
+Signal - GND - GND - Signal
+
+Slide switch (initially intended for changing I2C address) was removed from the top right corner to reduce production cost.
 ## Programing
 
 Programming was done using basic functions for reading and writing registers.

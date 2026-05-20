@@ -11,10 +11,9 @@ Collection of my PCB and embedded systems projects.
 
 | Project | Description |
 |---|---|
-| [Buck - Boost] (./Buck - Boost)| TPS55289 based buck - boost converter |
+| [Buck - Boost](./Buck%20-%20Boost) | TPS55289 based buck-boost converter |
 | [CH32V006K8U6] (./CH32V006K8U6 Tutorial)| CH32V006K8U6 dev board|
 | [EKVP] (./Course Project(EKVP))| UART driver to STM communication|
----
 
 ## Tools & Technologies
 
