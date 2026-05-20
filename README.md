@@ -11,18 +11,17 @@ Collection of my PCB and embedded systems projects.
 
 | Project | Description |
 |---|---|
-| [Buck - Boost] | TPS55289 based buck - boost converter |
-| [CH32V006K8U6 ] | CH32V006K8U6 dev board|
-| [EKVP] | UART driver to STM communication|
-| [OhmSprint] | Voltage and current readings  |
+| [Buck - Boost] (./Buck - Boost)| TPS55289 based buck - boost converter |
+| [CH32V006K8U6] (./CH32V006K8U6 Tutorial)| CH32V006K8U6 dev board|
+| [EKVP] (./Course Project(EKVP))| UART driver to STM communication|
 ---
 
 ## Tools & Technologies
 
 - KiCad
 - Altium Designer
-- Arduino nano
-- UART, I2C, USB ext.
+- Arduino nano, ESP32, dsPIC30F series
+- UART, I2C, USB ect.
 - C, C++ 
 - Ansys
 - FreeRTOS(will soon be added)
