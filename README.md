@@ -23,8 +23,8 @@ Collection of my PCB and embedded systems projects.
 
 - KiCad
 - Altium Designer
+- Ansys
 - Arduino nano, ESP32, dsPIC30F series
 - UART, I2C, USB ect.
 - C, C++ 
-- Ansys
-- FreeRTOS(will soon be added)
+- FreeRTOS(TBA - to be added)
