@@ -10,7 +10,7 @@ Small PCB with Buck-Boost converter based on TI TSP55289 chip
 - 1V - 22V output voltage
 - Pins for I2C communication
 - 4 layer board
-- 2 easy to screw header pins for input and outpu
+- 2 easy to screw header pins for input and output
 
 ---
 
@@ -20,7 +20,7 @@ Small PCB with Buck-Boost converter based on TI TSP55289 chip
   <tr>
     <td align="center">
       <img src="Sch.png" width="400"><br>
-      <b>3D Schematic</b>
+      <b>Schematic</b>
     </td>
     <td align="center">
       <img src="3D - bb.png" width="400"><br>
