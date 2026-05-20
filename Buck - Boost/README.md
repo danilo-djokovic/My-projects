@@ -24,7 +24,7 @@ Small PCB with Buck-Boost converter based on TI TSP55289 chip
     </td>
     <td align="center">
       <img src="3D - bb.png" width="400"><br>
-      <b>3D 3D View</b>
+      <b>3D View</b>
     </td>
   </tr>
   <tr>
