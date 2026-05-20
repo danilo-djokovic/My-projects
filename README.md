@@ -1,7 +1,7 @@
 # My-projects
 List of personal projects I’ve worked on over the years
 
-# Hardware Projects
+# Hardware and Embedded Projects
 
 Collection of my PCB and embedded systems projects.
 
@@ -11,17 +11,18 @@ Collection of my PCB and embedded systems projects.
 
 | Project | Description |
 |---|---|
-| [STM32 CAN Board](./stm32_can_board) | Compact STM32 board with CAN interface |
-| [USB-C Power Board](./usb_c_power_board) | USB-C powered DC supply board |
-| [LVDS Adapter](./lvds_adapter) | High-speed LVDS differential adapter |
-
+| [Buck - Boost] | TPS55289 based buck - boost converter |
+| [CH32V006K8U6 ] | CH32V006K8U6 dev board|
+| [EKVP] | UART driver to STM communication|
+| [OhmSprint] | Voltage and current readings  |
 ---
 
 ## Tools & Technologies
 
 - KiCad
-- STM32
 - Altium Designer
-- USB-C PD
-- CAN Bus
-- LVDS
+- Arduino nano
+- UART, I2C, USB ext.
+- C, C++ 
+- Ansys
+- FreeRTOS(will soon be added)
