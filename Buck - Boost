@@ -1,0 +1,51 @@
+# Buck - Boost converter
+
+Small PCB with Buck-Boost converter based on TI TSP55289 chip
+
+---
+
+## Features
+
+- 3V - 30V input voltage
+- 1V - 22V output voltage
+- Pins for I2C communication
+- 4 layer board
+- 2 easy to screw header pins for input and outpu
+
+---
+
+## PCB Preview
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/top_3d.png" width="400"><br>
+      <b>3D Top View</b>
+    </td>
+    <td align="center">
+      <img src="images/bottom_3d.png" width="400"><br>
+      <b>3D Bottom View</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/top_pcb.png" width="400"><br>
+      <b>Top Layer</b>
+    </td>
+    <td align="center">
+      <img src="images/bottom_pcb.png" width="400"><br>
+      <b>Bottom Layer</b>
+    </td>
+  </tr>
+</table>
+
+---
+
+## Hardware
+
+Slide switch(initialy intended for changing I2C adress) was remowed from top right corner for lowering the price of production.
+
+## Programing
+
+Programming was done using basic functions for reading and writing registers.
+Everything was coded in Arduino IDE using arduino nano microcontroller
