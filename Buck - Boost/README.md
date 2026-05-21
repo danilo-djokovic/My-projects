@@ -50,4 +50,4 @@ Slide switch (initially intended for changing I2C address) was removed from the 
 ## Programing
 
 Programming was done using basic functions for reading and writing registers.
-Everything was coded in Arduino IDE using arduino nano microcontroller
+Everything was coded in Arduino IDE using arduino nano microcontroller.

@@ -17,14 +17,18 @@ Collection of my PCB and embedded systems projects.
 | [Applied Electronics](./Applied%20Electronics)| Course project TBA|
 | [Prctical electronics](./Practical%20Electronics)| Course project TBA|
 | [Applications of Sensors and Actuators](./Applications%20of%20Sensors%20and%20Actuators)| Course project TBA|
+| [Adaptive cruise control (ACC)](./Adaptive%20Cruise%20Control%20(ACC))| FreeRTOS project(TBA)|
+| [OhmSprint competition project](./OhmSprint%20competition)| Current and voltage sensing board(TBA) |
 
 
 ## Tools & Technologies
 
-- KiCad
 - Altium Designer
-- Ansys
+- KiCad
+- Basic Simulations in Ansys SiWave
 - Arduino nano, ESP32, dsPIC30F series
+- STM32(TBA)
+-STM Cube IDE(TBA)
+- C, C++
+- FreeRTOS
 - UART, I2C, USB ect.
-- C, C++ 
-- FreeRTOS(TBA - to be added)

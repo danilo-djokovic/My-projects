@@ -1,16 +1,18 @@
-# Buck - Boost converter
+# UART communication board
 
-Small PCB with Buck-Boost converter based on TI TSP55289 chip
+UART to STM board based on ADM3202 driver.
+
+This was a small course project mainly for learning Ansys SiWave simulations.
 
 ---
 
 ## Features
 
-- 3V - 30V input voltage
-- 1V - 22V output voltage
-- Pins for I2C communication
+- ADM3202 driver.
+- Small dimensions (31mm x 39mm)
+- Pins for external communication with STM32F042F6P6TR
 - 4 layer board
-- 2 easy to screw header pins for input and outpu
+- 24V input
 
 ---
 
@@ -18,36 +20,46 @@ Small PCB with Buck-Boost converter based on TI TSP55289 chip
 
 <table>
   <tr>
-    <td align="center">
-      <img src="Sch.png" width="400"><br>
-      <b>3D Top View</b>
-    </td>
-    <td align="center">
-      <img src="3D - bb.png" width="400"><br>
-      <b>3D Bottom View</b>
+    <td align="center" colspan="2">
+      <img src="EKVP sch.png" width="820"><br>
+      <b>Schematic</b>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="Top layer.png" width="400"><br>      
-      <b>Top Layer</b>
+      <img src="EKVP 3d.png" width="400"><br>      
+      <b>3D view</b>
     </td>
     <td align="center">
-      <img src="Bottom layer.png" width="400"><br>
-      <b>Bottom Layer</b>
+      <img src="EKVP routing.png" width="400"><br>
+      <b>Top and bottom layer</b>
     </td>
   </tr>
 </table>
 
 ---
-
 ## Hardware
-Stackup used for board was: 
-					Signal - GND - GND - Signal
-Slide switch(initialy intended for changing I2C address) was remowed from top right corner for lowering the price of production.
+Stackup used for board was:
 
-## Programing
+Signal - GND - GND - Signal
 
-Programming was done using basic functions for reading and writing registers.
-Everything was coded in Arduino IDE using arduino nano microcontroller
+GND was connected from top and bottom layers using vias.
+
+---
+## Simulations
+
+The simulations were performed in Ansys SiWave.
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="DC drop.png" width="400"><br>      
+      <b>DC drop on 3V3 traces</b>
+    </td>
+    <td align="center">
+      <img src="CUR_gnd1.png" width="400"><br>
+      <b>Current on gnd1 plane</b>
+    </td>
+  </tr>
+</table>
 
