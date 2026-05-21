@@ -32,4 +32,4 @@ Collection of my PCB and embedded systems projects.
 - FreeRTOS*
 - UART, I2C, USB ect.
 
-* TBA - to be added
+*TBA - to be added
