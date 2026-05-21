@@ -2,7 +2,7 @@
 
 UART to STM board based on ADM3202 driver.
 
-This was a small course project mainly for learning Ansys SiWave simulations.
+This was a small course project mainly focused on learning Ansys SiWave simulations.
 
 ---
 

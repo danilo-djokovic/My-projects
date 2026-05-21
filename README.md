@@ -28,7 +28,7 @@ Collection of my PCB and embedded systems projects.
 - Basic Simulations in Ansys SiWave
 - Arduino nano, ESP32, dsPIC30F series
 - STM32(TBA)
--STM Cube IDE(TBA)
+- STM Cube IDE(TBA)
 - C, C++
 - FreeRTOS
 - UART, I2C, USB ect.
