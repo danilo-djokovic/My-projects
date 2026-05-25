@@ -54,4 +54,4 @@ Pins used for input and output can be seen on block scheme.
 
 ## Demo Video
 
-<video src="Viddeo.mp4" controls autoplay muted loop width="700"></video>
+https://github.com/USERNAME/REPO/blob/main/Viddeo.mp4
