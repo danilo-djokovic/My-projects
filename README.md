@@ -14,7 +14,7 @@ Collection of my PCB and embedded systems projects.
 | [Buck - Boost](./Buck%20-%20Boost) | TPS55289 based buck-boost converter|
 | [Applied Electronics](./Applied%20Electronics)| C embedded project|
 | [EKVP](./Course%20Project(EKVP))| UART driver to STM communication|
-| [Adaptive cruise control (ACC)](./Adaptive%20Cruise%20Control%20(ACC))| FreeRTOS project*|
+| [Adaptive cruise control (ACC)](./Adaptive%20Cruise%20Control%20(ACC))| FreeRTOS project|
 | [OhmSprint competition project](./OhmSprint%20competition)| Current and voltage sensing board*|
 | [Applications of Sensors and Actuators](./Applications%20of%20Sensors%20and%20Actuators)| Course project|
 | [CH32V006K8U6](./CH32V006K8U6%20Tutorial)| CH32V006K8U6 dev board|
@@ -28,7 +28,7 @@ Collection of my PCB and embedded systems projects.
 - Arduino nano, ESP32, dsPIC30F series
 - STM32*
 - C, C++
-- FreeRTOS*
+- FreeRTOS
 - Arduino IDE, MPLAB X IDE
 - STM Cube IDE*
 - UART, I2C, USB ect.
