@@ -12,7 +12,7 @@ Collection of my PCB and embedded systems projects.
 | Project | Description |
 |---|---|
 | [Buck - Boost](./Buck%20-%20Boost) | TPS55289 based buck-boost converter|
-| [Applied Electronics](./Applied%20Electronics)| Course project*|
+| [Applied Electronics](./Applied%20Electronics)| C embedded project|
 | [EKVP](./Course%20Project(EKVP))| UART driver to STM communication|
 | [Adaptive cruise control (ACC)](./Adaptive%20Cruise%20Control%20(ACC))| FreeRTOS project*|
 | [OhmSprint competition project](./OhmSprint%20competition)| Current and voltage sensing board*|
