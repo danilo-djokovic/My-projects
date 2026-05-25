@@ -1,6 +1,7 @@
 # Applied electronics project
 
 Home security project made with various sensors and actuators.
+
 Project was realised using dsPIC30F4013 on EasyPIC v7 dev board and programmed in MPLAB X IDE.
 
 ---
@@ -44,7 +45,13 @@ Project was realised using dsPIC30F4013 on EasyPIC v7 dev board and programmed i
 ## Programming
 
 System was programmed in C using timers and state machine.
+
 Sensors and actuators use digital and analog signals.
+
 Pins used for input and output can be seen on block scheme.
 
+---
 
+## Demo Video
+
+<video src="Viddeo.mp4" controls autoplay muted loop width="700"></video>
