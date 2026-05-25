@@ -54,4 +54,4 @@ Pins used for input and output can be seen on block scheme.
 
 ## Demo Video
 
-https://github.com/USERNAME/REPO/blob/main/Viddeo.mp4
+https://github.com/danilo-djokovic/My-projects/blob/main/Applied%20Electronics/Viddeo.mp4
