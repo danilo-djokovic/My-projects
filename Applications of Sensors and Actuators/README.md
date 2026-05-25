@@ -5,6 +5,7 @@ Project name is "Staklenik" - "Greenhouse".
 The project included a plant, and by using sensors and actuators we monitored various parameters necessary for its growth (soil moisture, temperature, pressure, etc.). With the help of actuators, the measured values could be easily adjusted.
 
 Four teams worked on separate parts of the project during semester.
+
 ---
 
 ## Features
@@ -27,7 +28,7 @@ Four teams worked on separate parts of the project during semester.
   </tr>
   <tr>
     <td align="center" colspan="2">
-      <img src="System.png" width="800"><br>
+      <img src="System.jpg" width="800"><br>
       <b>physical system realisation</b>
     </td>
   </tr>
