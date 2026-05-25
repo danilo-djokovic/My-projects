@@ -11,7 +11,8 @@ The implementation was developed in a simulated embedded environment using modul
 ## Main functionalities
 
 - Automatic and manual operating modes
-- Monitoring of current, average, minimum, and maximum speed 
+- Monitoring of current speed
+- Monitoring of min/max distance
 - LED bar used as input and output interface
 - 7-segment display for informatio indication
 - Serial communication (COM0 & COM1)
