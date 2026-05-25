@@ -16,7 +16,7 @@ Collection of my PCB and embedded systems projects.
 | [EKVP](./Course%20Project(EKVP))| UART driver to STM communication|
 | [Adaptive cruise control (ACC)](./Adaptive%20Cruise%20Control%20(ACC))| FreeRTOS project*|
 | [OhmSprint competition project](./OhmSprint%20competition)| Current and voltage sensing board*|
-| [Applications of Sensors and Actuators](./Applications%20of%20Sensors%20and%20Actuators)| Course project*|
+| [Applications of Sensors and Actuators](./Applications%20of%20Sensors%20and%20Actuators)| Course project|
 | [CH32V006K8U6](./CH32V006K8U6%20Tutorial)| CH32V006K8U6 dev board|
 
 
@@ -27,7 +27,7 @@ Collection of my PCB and embedded systems projects.
 - Basic Simulations in Ansys SiWave
 - Arduino nano, ESP32, dsPIC30F series
 - STM32*
-- STM Cube IDE*
+- Arduino IDE, MPLAB X IDE, STM Cube IDE*
 - C, C++
 - FreeRTOS*
 - UART, I2C, USB ect.

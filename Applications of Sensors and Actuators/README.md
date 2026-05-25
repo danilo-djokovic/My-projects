@@ -17,27 +17,24 @@ Four teams worked on separate parts of the project during semester.
 ---
 
 ## System Preview
-## System Preview
 
-<p align="center">
-  <img src="Staklenik_bb.png" width="800">
-  <br>
-  <b>Sensor and actuators wiring</b>
-</p>
-<p align="center">
-  <img src="System.png" width="800">
-  <br>
-  <b>physical system realisation</b>
-</p>
+<table>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="Staklenik_bb.png" width="800"><br>
+      <b>Sensor and actuators wiring</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="System.png" width="800"><br>
+      <b>physical system realisation</b>
+    </td>
+  </tr>
+</table>
 
 ---
 
 ## Programming
 
 Everything was coded in C in Ardino IDE.
-
----
-
-## Demo Video
-
-https://github.com/danilo-djokovic/My-projects/blob/main/Applied%20Electronics/Viddeo.mp4
