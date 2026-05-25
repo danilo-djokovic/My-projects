@@ -24,12 +24,13 @@ Collection of my PCB and embedded systems projects.
 
 - Altium Designer
 - KiCad
-- Basic Simulations in Ansys SiWave
+- Basic Simulations in Ansys SiWave and MicroCap
 - Arduino nano, ESP32, dsPIC30F series
 - STM32*
-- Arduino IDE, MPLAB X IDE, STM Cube IDE*
 - C, C++
 - FreeRTOS*
+- Arduino IDE, MPLAB X IDE
+- STM Cube IDE*
 - UART, I2C, USB ect.
 
 *TBA - to be added
