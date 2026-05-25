@@ -11,11 +11,9 @@ The implementation was developed in a simulated embedded environment using modul
 ## Main functionalities
 
 - Automatic and manual operating modes
-- Control of window raising/lowering level
-- Monitoring of current, average, minimum, and maximum speed
-- Speed limit detection
+- Monitoring of current, average, minimum, and maximum speed 
 - LED bar used as input and output interface
-- 7-segment display for status indication
+- 7-segment display for informatio indication
 - Serial communication (COM0 & COM1)
 
 ### Tasks
