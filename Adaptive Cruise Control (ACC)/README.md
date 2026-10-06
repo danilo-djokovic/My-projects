@@ -1,102 +1,126 @@
-# Adaptive cruise control
+# Adaptive Cruise Control (FreeRTOS)
 
-This project demonstrates a timer-driven task scheduling system using FreeRTOS. The application implements periodic serial communication over two independent channels (COM0 and COM1) by using software timers and semaphores to trigger tasks at different time intervals.
+Real-time adaptive cruise control simulation built on **FreeRTOS**. Periodic tasks are triggered by **software timers and semaphores**, and the system communicates over two independent serial channels (COM0 and COM1) while using an LED bar and a seven-segment display as the user interface. The project was developed in a simulated embedded environment (Visual Studio, x86), with simulated serial, LED bar and seven-segment peripherals.
 
-The system is used for adaptive cruise control management and the transmission of related information.
+<p align="center">
+  <img src="Tempomat komanda.gif" width="600" alt="Cruise control commands demo"/>
+</p>
 
-The implementation illustrates how FreeRTOS timers can be used to control task execution timing, while semaphores ensure synchronization between timer callbacks and communication tasks.
+---
 
-The implementation was developed in a simulated embedded environment using modules for serial communication, a seven-segment display, and LED control.
-
-## Main functionalities
+## Features
 
 - Automatic and manual operating modes
 - Monitoring of current speed
-- Monitoring of min/max distance
-- LED bar used as input and output interface
-- 7-segment display for informatio indication
-- Serial communication (COM0 & COM1)
+- Monitoring of minimum and maximum measured distance
+- Distance threshold warning (default threshold: 150 cm, changeable at runtime)
+- LED bar used as both input and output interface
+- Seven-segment display for status information
+- Serial communication over two channels (COM0 for the sensor, COM1 for commands and status)
+
+---
+
+## System Architecture
+
+FreeRTOS **software timers** release the periodic tasks at different time intervals, and **semaphores** synchronize the timer callbacks with the tasks that do the work. This keeps the timing logic separate from the communication and processing logic.
 
 ### Tasks
 
 | Task | Functionality |
-|-----|------|
-| `Prijem_podataka_sa_senzora` | Receiving data from sensor |
-| `Slanje_podataka_kanal1` | Send data to COM1 |
-| `Prijem_podataka_kanal1` | Receiving data from COM1 |
-| `LED_Bar_Read1` | Reads input LED bar |
-| `LED_Bar_Write` | Writes output LED bar |
-| `Display_Task` | 7-seg display control |
-| `Automatski_Rezim` | Data processing |
+|---|---|
+| `Prijem_podataka_sa_senzora` | Receives sensor data (COM0) |
+| `Slanje_podataka_kanal1` | Sends status data to COM1 |
+| `Prijem_podataka_kanal1` | Receives commands from COM1 |
+| `LED_Bar_Read1` | Reads the input LED bar |
+| `LED_Bar_Write` | Writes the output LED bar |
+| `Display_Task` | Controls the seven-segment display |
+| `Automatski_Rezim` | Automatic mode: processes data and controls speed |
 
-## Instructions for testing
+---
 
-To run the program, it is necessary to have Visual Studio installed and to download the entire GitHub repository.
+## How It Works
 
-All required peripheral devices must be configured. The necessary peripheral software can be found in the Peripherals folder.
+### Sensor input (COM0)
 
-For each peripheral, the following steps are required:
+The sensor is simulated by typing a distance value on COM0, followed by Enter.
 
-Open Command Prompt.
-Create a directory.
-Set the path to the folder containing the corresponding peripheral software.
-Then enter the software name along with the appropriate arguments:
-- LED_bars : bY (Other color combinations can also be used, e.g. rG. It is important to respect uppercase and lowercase letters.)
-- Seg7_Mux 10
-- AdvUniCom 0
-- AdvUniCom 1
+- Allowed range: 0 to 999 cm
+- The program calculates the **average of the last 10 values**
+- The first input LED selects whether the **minimum** or **maximum** sensor value is shown
 
-Finally, start the program by clicking the Local Windows Debugger button in Visual Studio, and make sure that the build configuration is set to x86 on the left side of the button.
+### Status and commands (COM1)
 
-## PROGRAM
-On COM0, insert the sensor value and click Enter to send and simulate the sensor input:
-- The allowed range is from 0 to 999 cm.
-- The program calculates the average of the last 10 values, and by activating the 1st input LED on the LED bar, we can choose whether to display the minimum or maximum sensor value.
-- Each message must end with Enter.
+COM1 reports whether cruise control is on or off and whether the average distance is greater than the threshold. Two commands can be sent:
 
-On COM1, the following information is displayed:
-- Whether cruise control is on or off
-- Whether the average distance is greater than the threshold
+| Command | Effect |
+|---|---|
+| `TEMPOMAT_xxx` | Sets the cruise control speed to `xxx`, or `TEMPOMAT_OFF` to disable cruise control |
+| `PRAG_xxx` | Sets a new distance threshold (default: 150) |
 
-On COM1, we can also send two commands:
-- TEMPOMAT_xxx — xxx represents the speed that can be set, or OFF can be entered to disable cruise control
-- PRAG_xxx — used to set a new threshold value (the default threshold is 150)
+If cruise control is enabled, the speed increases automatically and tries to reach the set cruise speed. If it is disabled, the speed decreases.
 
-Two LED bars are used: one for input and one for output:
-Input bar:
-- Turning the 1st LED on/off selects whether the minimum or maximum sensor distance is displayed, as mentioned earlier.
-- The 2nd LED turns cruise control on/off.
-- The last 3 LEDs simulate the three pedals in a car. Activating any of them turns cruise control off.
+### LED bars
 
-Output bar:
-- Blinks every second if the average sensor distance is smaller than the threshold.
+| Bar | LED | Function |
+|---|---|---|
+| Input | 1st | Selects minimum or maximum sensor distance for the display |
+| Input | 2nd | Turns cruise control on or off |
+| Input | Last 3 | Simulate the three car pedals; activating any of them turns cruise control off |
+| Output | | Blinks every second when the average distance is below the threshold |
 
-If cruise control is enabled, the speed will automatically increase and attempt to reach the cruise control speed set with the TEMPOMAT_xxx command. If cruise control is disabled, the speed will decrease.
+### Seven-segment display
 
-Ten seven-segment displays are used to show information:
-- The first 3 digits display the cruise control speed (if cruise control is off, 999 is displayed).
-- The 4th digit is always 0.
-- The next 3 digits display the current speed.
-- The last 3 digits display the minimum or maximum sensor value.
+Ten digits show the system state:
+
+| Digits | Content |
+|---|---|
+| 1–3 | Cruise control speed (999 when cruise control is off) |
+| 4 | Always 0 |
+| 5–7 | Current speed |
+| 8–10 | Minimum or maximum sensor value |
+
+---
+
+## Demo
 
 <p align="center">
-  <img src="Simulacija senzora.gif" width="600"/>
+  <img src="Simulacija senzora.gif" width="600" alt="Sensor simulation on COM0"/>
 </p>
 
 <p align="center"><b>Sensor simulation (COM0)</b></p>
 
----
-
 <p align="center">
-  <img src="Tempomat komanda.gif" width="600"/>
+  <img src="Tempomat komanda.gif" width="600" alt="Cruise control commands on COM1"/>
 </p>
 
-<p align="center"><b>Cruise control commands</b></p>
+<p align="center"><b>Cruise control commands (COM1)</b></p>
+
+<p align="center">
+  <img src="LED komande.gif" width="600" alt="LED bar example"/>
+</p>
+
+<p align="center"><b>LED bar example</b></p>
 
 ---
 
-<p align="center">
-  <img src="LED komande.gif" width="600"/>
-</p>
+## Running the Project
 
-<p align="center"><b>LED example</b></p>
+**Requirements:** Visual Studio and the whole repository downloaded. The peripheral simulators are in the `Peripherals` folder.
+
+1. Open Command Prompt for each peripheral, go to the folder with the peripheral software and start it with its arguments:
+   - `LED_bars bY` (other color combinations such as `rG` also work; uppercase and lowercase letters matter)
+   - `Seg7_Mux 10`
+   - `AdvUniCom 0`
+   - `AdvUniCom 1`
+2. In Visual Studio set the build configuration to **x86**.
+3. Start the program with **Local Windows Debugger**.
+
+---
+
+## Skills Demonstrated
+
+- Real-time task design with FreeRTOS (tasks, software timers, semaphores)
+- Periodic task scheduling and synchronization
+- Serial communication protocol handling (command parsing)
+- State logic with multiple inputs (modes, thresholds, safety inputs)
+- Working with simulated peripherals (UART, LED bar, seven-segment display)

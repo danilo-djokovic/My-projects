@@ -1,18 +1,36 @@
-# OhmSprint – Competition Project
+# OhmSprint – AC Voltage and Current Measurement Board
+
+Measurement board built for the **OhmSprint** competition. It measures a **7 V AC input** and the **current through a load** using the **ATM90E26** metering IC, processes the data on an STM32 microcontroller and shows the results on an LCD display. First designed in **KiCad**, then fully **redesigned in Altium Designer** to fix routing and power distribution problems of the original board.
+
+<p align="center">
+  <img src="Pictures/3D_PCb.png" width="500" alt="3D view of the redesigned PCB">
+</p>
+
+---
 
 ## Competition Task
 
-The objective of the competition was to design a measurement system in which the input consisted of a **7 V AC signal and the current flowing through the measured load**.
+The task was to design a measurement system whose inputs are a **7 V AC signal** and the **current flowing through the measured load**. The signals had to be acquired and processed with the **ATM90E26** measurement IC. Everything else (power supply, communication interfaces, microcontroller and supporting circuitry) was left to the competitor, and so was the way the measured data is processed and presented.
 
-The measured signals were required to be acquired and processed using the **ADM90E26** measurement IC. The remaining parts of the circuit, including the power supply, communication interfaces, microcontroller and supporting circuitry, were left to the competitor's choice.
+---
 
-In addition to designing the hardware, the competition required the measured data to be **processed and presented in a suitable way**. The implementation and presentation of the measured data were left to the designer's discretion.
+## System Overview
 
-### Original Design
+| Block | Implementation |
+|---|---|
+| Measurement IC | ATM90E26 (AC voltage, current, frequency and power measurement) |
+| Voltage input | 7 V AC, resistor dividers feeding differentially routed voltage channel inputs |
+| Current input | Dedicated current channel with burden and filtering network |
+| Power supply | Full Graetz bridge rectifier from the AC input, followed by an MCP16301 buck regulator producing 3.3 V |
+| Microcontroller | STM32G431K6T6 |
+| Interfaces | SPI between the MCU and ATM90E26, USB for data transfer, SWD for programming |
+| Display | LCD mounted on the board with four mounting holes |
 
-The original design was developed in **KiCad**, with the decision made to use an **LCD display** for presenting the measured data. Four mounting holes were provided on the upper side of the PCB to accommodate the mechanical mounting of the display.
+---
 
-The following images show the schematic provided as part of the original design.
+## Original Design (KiCad)
+
+The first version of the board was designed in **KiCad**. An **LCD display** was chosen for presenting the measured data, so four mounting holes were placed on the upper side of the PCB for mounting the display.
 
 <p align="center">
   <img src="Pictures/KiCaad_measuring_unit.png" width="48%">
@@ -25,8 +43,6 @@ The following images show the schematic provided as part of the original design.
 
 ### Original PCB
 
-The following images show the original PCB design.
-
 <p align="center">
   <img src="Pictures/KiCaad_both_layers.png" width="48%">
   <img src="Pictures/KiCaad_3d.png" width="48%">
@@ -36,28 +52,21 @@ The following images show the original PCB design.
 
 ## Altium Designer Redesign
 
-The original design was redesigned in **Altium Designer** primarily to address issues identified in the original PCB, particularly **routing problems and errors in the power distribution**.
-
-While redesigning the board, a similar overall component placement was intentionally maintained in order to remain consistent with the original design and preserve its general architecture. The focus was therefore placed on improving the implementation rather than completely changing the original component arrangement.
+The design was redone in **Altium Designer** to address problems found in the original board, mainly **routing issues and errors in the power distribution**. The component placement and the overall architecture were kept similar to the original, so the work focused on improving the implementation instead of changing the concept.
 
 ### Main Improvements
 
-- Recreated and corrected the schematic in Altium Designer
-- Redesigned and corrected component footprints
-- Created and corrected 3D models for the components
-- Improved overall PCB routing
-- Improved power routing and power distribution
-- Improved the use of GND planes to provide more appropriate current return paths
-- Removed unnecessary test points
-- Improved GND via stitching
-- Improved differential-pair routing
-- Corrected and optimized differential trace routing
+- Schematic recreated and corrected
+- Component footprints redesigned and corrected
+- 3D models created and corrected for the components
+- Overall PCB routing improved
+- Power routing and power distribution improved
+- GND planes used more effectively to give proper current return paths
+- GND via stitching improved
+- Differential-pair routing corrected and optimized
+- Unnecessary test points removed
 
----
-
-## Redesigned Schematic
-
-The complete schematic was recreated and corrected in **Altium Designer**.
+### Redesigned Schematic
 
 <p align="center">
   <img src="Pictures/Measurment_unit.png" width="48%">
@@ -68,11 +77,9 @@ The complete schematic was recreated and corrected in **Altium Designer**.
   <img src="Pictures/Power_supply.png" width="48%">
 </p>
 
----
+### PCB Layout
 
-## PCB Layout
-
-The PCB layout was redesigned with particular attention to power distribution, current return paths, differential routing and overall routing quality.
+The layout was redesigned with particular attention to power distribution, current return paths, differential routing and overall routing quality.
 
 <p align="center">
   <img src="Pictures/Top-layer.png" width="48%">
@@ -84,46 +91,21 @@ The PCB layout was redesigned with particular attention to power distribution, c
   <img src="Pictures/3D_PCb.png" width="48%">
 </p>
 
-## Tools & Technologies
+---
 
-The project involved the use of multiple hardware design tools and technologies throughout the design process.
+## Skills Demonstrated
 
-### Design Tools
-
-- **Altium Designer** – schematic capture, PCB design, component placement, routing, design-rule configuration and 3D PCB verification
-- **KiCad** – schematic/PCB reference and supporting PCB design work
-
-### Hardware Design
-
-- Schematic analysis and redesign
-- Component selection and evaluation
-- Component footprint creation and modification
-- PCB component placement
-- Power distribution and power routing
-- Ground-plane design
-- Ground via stitching
-- Differential-pair routing
-- PCB trace-width and clearance considerations
-- PCB layer and stack-up considerations
-
-### Communication Interfaces
-
-- **SPI** communication between the measurement circuitry and microcontroller
-- **USB** communication for data transfer and interfacing
-- Digital interface and signal routing considerations
-
-### Measurement & Data Acquisition
-
-- AC voltage measurement
-- Current measurement
-- Signal acquisition using the **ADM90E26**
-- Digital processing and transfer of measured data
-- Processing and presentation of measurement results
+| Area | Details |
+|---|---|
+| Design tools | Altium Designer (schematic capture, PCB layout, design rules, 3D verification), KiCad |
+| PCB design | Component placement, power distribution, ground planes, GND via stitching, differential-pair routing, trace width and clearance, stack-up |
+| Library work | Footprint creation and modification, 3D model creation |
+| Mixed-signal measurement | AC voltage and current sensing with the ATM90E26, analog front-end design, separation of power and measurement circuitry |
+| Interfaces | SPI, USB, SWD |
+| Design review | Analysis of an existing design, finding errors and redesigning it |
 
 ---
 
 ## Project Status
 
-**Completed**
-
-The competition project has been completed, including both the **original design analysis** and the **redesigned schematic and PCB implementation**.
+**Completed.** Both the analysis of the original design and the redesigned schematic and PCB in Altium Designer are finished.
