@@ -81,7 +81,7 @@ The PCB layout was redesigned with particular attention to power distribution, c
 
 <p align="center">
   <img src="Pictures/Both_layers.png" width="48%">
-  <img src="Pictures/3D_PCB.png" width="48%">
+  <img src="Pictures/3D_PCb.png" width="48%">
 </p>
 
 ## Tools & Technologies
