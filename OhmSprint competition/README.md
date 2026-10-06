@@ -19,7 +19,7 @@ The task was to design a measurement system whose inputs are a **7 V AC signal**
 | Block | Implementation |
 |---|---|
 | Measurement IC | ATM90E26 (AC voltage, current, frequency and power measurement) |
-| Voltage input | 7 V AC, resistor dividers feeding differentially routed voltage channel inputs |
+| Voltage input | 7 V AC, resistor dividers feeding differentially routed voltfage channel inputs |
 | Current input | Dedicated current channel with burden and filtering network |
 | Power supply | Full Graetz bridge rectifier from the AC input, followed by an MCP16301 buck regulator producing 3.3 V |
 | Microcontroller | STM32G431K6T6 |
