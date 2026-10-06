@@ -1,6 +1,6 @@
 # My Projects
 
-Personal and course projects in **PCB design, power electronics and embedded systems**. Focus: hardware design (schematic capture, PCB layout, power integrity, mixed-signal measurement) with embedded firmware to bring the boards to life. Looking for junior and internship hardware design engineer positions.
+Personal and course projects in **PCB design, power electronics and embedded systems**. Focus: hardware design (schematic capture, PCB layout, power integrity, mixed-signal measurement) with embedded firmware to bring the boards to life.
 
 ---
 
@@ -25,23 +25,50 @@ Personal and course projects in **PCB design, power electronics and embedded sys
 
 ## Skills
 
-**PCB and hardware design**
-Schematic capture, PCB layout, multi-layer stackup (4 layers), component placement, power distribution and routing, ground planes and GND via stitching, differential-pair routing, footprint and 3D model creation, design review and redesign of existing boards
+### PCB and Hardware Design
+- Schematic capture and PCB layout
+- Multi-layer boards (2 and 4 layers) and stackup design
+- Component placement and routing
+- Power distribution and power routing
+- Ground planes and GND via stitching
+- Differential-pair routing
+- Footprint and 3D model creation
+- Design review and redesign of existing boards
 
-**Power electronics**
-Buck-boost converter design, I2C-controlled DC-DC conversion, 12 V / 5 V / 3.3 V power rail design
+### Power Electronics
+- Buck-boost converter design
+- I2C-controlled DC-DC conversion
+- 12 V / 5 V / 3.3 V power rail design
 
-**Simulation and analysis**
-DC voltage drop and plane current analysis (Ansys SIwave), circuit simulation (MicroCap)
+### Simulation and Analysis
+- DC voltage drop analysis (Ansys SIwave)
+- Plane current distribution analysis (Ansys SIwave)
+- Circuit simulation (MicroCap)
 
-**Measurement, sensors and actuators**
-AC voltage and current measurement, energy metering IC (ATM90E26), analog front-end design, environmental and light sensors, motor, stepper and servo drivers
+### Measurement, Sensors and Actuators
+- AC voltage and current measurement
+- Energy metering IC (ATM90E26)
+- Analog front-end design
+- Environmental and light sensors (BME280, TEMT6000, MQ-135, PIR)
+- Motor, stepper and servo drivers
 
-**Embedded and interfaces**
-C, C++, FreeRTOS, I2C, SPI, UART, RS-232, USB, SWD
+### Embedded Programming and Interfaces
+- C and C++
+- FreeRTOS (tasks, software timers, semaphores)
+- State-machine based firmware
+- Communication interfaces: I2C, SPI, UART, RS-232, USB, SWD
 
-**Tools**
-Altium Designer, KiCad, Ansys SIwave, MicroCap, Arduino IDE, MPLAB X IDE
+### Tools
+- Altium Designer
+- KiCad
+- Ansys SIwave
+- MicroCap
+- Arduino IDE
+- MPLAB X IDE
 
-**Platforms**
-Arduino Nano, ESP32, dsPIC30F, STM32 (hardware design), CH32V006
+### Platforms
+- Arduino Nano
+- ESP32
+- dsPIC30F
+- STM32 (hardware design)
+- CH32V006

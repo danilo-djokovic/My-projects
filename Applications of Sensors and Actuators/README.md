@@ -105,11 +105,3 @@ A custom **two-layer PCB** was designed to:
 | System integration | Analog and digital sensors, DC, stepper and servo actuators, RTC and OLED in one system |
 | Embedded firmware | Arduino Nano control logic with threshold-based automation and time-based scheduling |
 | Teamwork | Hardware and software developed together in a student team |
-
----
-
-## Future Improvements
-
-- Wi-Fi (ESP32 / ESP8266) for remote monitoring
-- Mobile app or web dashboard
-- Data logging (SD card or cloud)

@@ -97,5 +97,3 @@ void setTpsVoltage(float v) {
   writeRegTPS(0x06, 0xA0);                 // mode / output enable
 }
 ```
-
-A full application example (solar panel I-V sweep with an INA219 current sensor) is in [`firmware/`](firmware/).

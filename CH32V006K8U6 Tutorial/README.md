@@ -21,7 +21,7 @@ Compact development board for the **WCH CH32V006K8U6**, a 32-bit RISC-V microcon
 
 ## About This Project
 
-The goal of this project was to learn how a complete microcontroller board is put together: reading the datasheet and reference design, drawing the schematic, placing components and routing a compact 2-layer board with a USB-C connector. The design follows the Curious Scientist tutorial, which made it a good starting point before moving on to my own, more complex designs such as the [Buck-Boost converter](../Buck%20-%20Boost) and the [OhmSprint measurement board](../OhmSprint%20competition).
+The goal of this project was to learn how a complete microcontroller board is put together: reading the datasheet and reference design, drawing the schematic, placing components and routing a compact 2-layer board with a USB-C connector. 
 
 ---
 
