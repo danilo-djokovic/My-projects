@@ -15,7 +15,7 @@ Collection of my PCB and embedded systems projects.
 | [Applied Electronics](./Applied%20Electronics)| C embedded project|
 | [EKVP](./Course%20Project(EKVP))| UART driver to STM communication|
 | [Adaptive cruise control (ACC)](./Adaptive%20Cruise%20Control%20(ACC))| FreeRTOS project|
-| [OhmSprint competition project](./OhmSprint%20competition)| Current and voltage sensing board*|
+| [OhmSprint competition project](./OhmSprint%20competition)| Current and voltage sensing board|
 | [Applications of Sensors and Actuators](./Applications%20of%20Sensors%20and%20Actuators)| Course project|
 | [CH32V006K8U6](./CH32V006K8U6%20Tutorial)| CH32V006K8U6 dev board|
 
