@@ -1,4 +1,4 @@
-# OhmSprint – Hardware Project
+# OhmSprint – Competition Project
 
 ## Competition Task
 
@@ -9,6 +9,8 @@ The measured signals were required to be acquired and processed using the **ADM9
 In addition to designing the hardware, the competition required the measured data to be **processed and presented in a suitable way**. The implementation and presentation of the measured data were left to the designer's discretion.
 
 ### Original Design
+
+The original design was developed in **KiCad**, with the decision made to use an **LCD display** for presenting the measured data. Four mounting holes were provided on the upper side of the PCB to accommodate the mechanical mounting of the display.
 
 The following images show the schematic provided as part of the original design.
 
@@ -26,8 +28,8 @@ The following images show the schematic provided as part of the original design.
 The following images show the original PCB design.
 
 <p align="center">
-  <img src="KiCaad_both_layers.png" width="48%">
-  <img src="KiCaad_3d.png" width="48%">
+  <img src="Pictures/KiCaad_both_layers.png" width="48%">
+  <img src="Pictures/KiCaad_3d.png" width="48%">
 </p>
 
 ---
